@@ -17,20 +17,19 @@ matrix:
       env:
         - USE_UPNP: ''
         - PIE: 1
-        - DEPENDENCIES: |-
-                         build-essential
-                         libtool
-                         automake
-                         autotools-dev
-                         autoconf
-                         pkg-config
-                         libssl-dev
-                         libgmp3-dev
-                         libevent-dev
-                         bsdmainutils
-                         libdb4.8-dev
-                         libdb4.8++-dev
-                         libminiupnpc-dev
+        - DEPENDENCIES: "build-essential \
+                         libtool \
+                         automake \
+                         autotools-dev \
+                         autoconf \
+                         pkg-config \
+                         libssl-dev \
+                         libgmp3-dev \
+                         libevent-dev \
+                         bsdmainutils \
+                         libdb4.8-dev \
+                         libdb4.8++-dev \
+                         libminiupnpc-dev"
     # - os: linux
     #   sudo: required
     #   env:
