@@ -3,10 +3,10 @@
 
 # BerkeleyDB is required for the wallet. db4.8 packages are available
 # here: https://launchpad.net/~bitcoin/+archive/bitcoin
-sudo add-apt-repository ppa:bitcoin/bitcoin -y
+# sudo add-apt-repository ppa:bitcoin/bitcoin -y
 
 # Update distribution
-sudo apt-get update
+# sudo apt-get update
 
 # Install base packages
 echo 'Installing MarteXd dependencies'
