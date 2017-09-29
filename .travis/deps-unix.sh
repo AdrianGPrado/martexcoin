@@ -10,38 +10,44 @@
 
 # Install base packages
 echo 'Installing MarteXd dependencies'
-sudo apt-get install -y build-essential \
-                     libtool \
-                     automake \
-                     autotools-dev \
-                     autoconf \
-                     pkg-config \
-                     libssl-dev \
-                     libgmp3-dev \
-                     libevent-dev \
-                     bsdmainutils \
-                     libboost-system-dev \
-                     libboost-filesystem-dev \
-                     libboost-chrono-dev \
-                     libboost-program-options-dev \
-                     libboost-test-dev \
-                     libboost-thread-dev
+sudo apt-get install -y \
+                        build-essential \
+                        software-properties-common \
+                        libboost-dev \
+                        libtool \
+                        automake \
+                        autotools-dev \
+                        autoconf \
+                        pkg-config \
+                        libssl-dev \
+                        libgmp3-dev \
+                        libevent-dev \
+                        bsdmainutils
 
-# Install BerkleyDB4.8
-sudo apt-get install -y libdb4.8-dev \
-                     libdb4.8++-dev
+sudo apt-get install -y \
+                        libboost-system-dev \
+                        libboost-filesystem-dev \
+                        libboost-chrono-dev \
+                        libboost-program-options-dev \
+                        libboost-test-dev \
+                        libboost-thread-dev
 
 sudo apt-get install -y libminiupnpc-dev
 
+# Install BerkleyDB4.8
+sudo apt-get install -y libdb4.8-dev \
+                        libdb4.8++-dev
+
 if [ -n "${MARTEX_QT}" ]; then
 echo 'Installing MarteX-Qt dependencies'
-sudo apt-get install -y libqt5gui5 \
-                     libqt5core5a \
-                     libqt5dbus5 \
-                     qttools5-dev \
-                     qttools5-dev-tools \
-                     libprotobuf-dev \
-                     protobuf-compiler
+sudo apt-get install -y \
+                        libqt5gui5 \
+                        libqt5core5a \
+                        libqt5dbus5 \
+                        qttools5-dev \
+                        qttools5-dev-tools \
+                        libprotobuf-dev \
+                        protobuf-compiler
 
 # libqrencode (optional) can be installed with:
 if [ -n "${MARTEX_QT_QR}" ]; then
