@@ -19,7 +19,13 @@ sudo apt-get install -y build-essential \
                      libssl-dev \
                      libgmp3-dev \
                      libevent-dev \
-                     bsdmainutils
+                     bsdmainutils \
+                     libboost-system-dev \
+                     libboost-filesystem-dev \
+                     libboost-chrono-dev \
+                     libboost-program-options-dev \
+                     libboost-test-dev \
+                     libboost-thread-dev
 
 # Install BerkleyDB4.8
 sudo apt-get install -y libdb4.8-dev \
