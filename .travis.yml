@@ -33,7 +33,10 @@ matrix:
   #   env: TOXENV=py33
 
 before_install:
-  - if [ $TRAVIS_OS_NAME == linux ]; then ./.travis/deps-unix.sh; fi
+  - |-
+    if [ $TRAVIS_OS_NAME == linux ]; then
+      ./.travis/deps-unix.sh;
+    fi
 # script:
 #   - |-
 #     if [ $TRAVIS_OS_NAME == linux && $MARTEX_QT == 1]; then
