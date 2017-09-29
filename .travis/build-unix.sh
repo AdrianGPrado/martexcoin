@@ -4,7 +4,7 @@ __dir__="$(cd "$(dirname "$0")" && pwd)"
 
 echo $__dir__
 
-if $MARTEX_QT ; then
+if [ -n "${MARTEX_QT}" ]; then
 echo 'Compile MarteX-Qt.';
 echo $__dir__
 else

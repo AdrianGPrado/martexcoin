@@ -27,7 +27,7 @@ sudo apt-get install -y libdb4.8-dev \
 
 sudo apt-get install -y libminiupnpc-dev
 
-if $MARTEX_QT ; then
+if [ -n "${MARTEX_QT}" ]; then
 echo 'Installing MarteX-Qt dependencies'
 sudo apt-get install -y libqt5gui5 \
                      libqt5core5a \
@@ -38,7 +38,7 @@ sudo apt-get install -y libqt5gui5 \
                      protobuf-compiler
 
 # libqrencode (optional) can be installed with:
-if $MARTEX_QT_QR; then
+if [ -n "${MARTEX_QT_QR}" ]; then
 echo 'Installing optional dependenci QR-code'
 sudo apt-get install -y libqrencode-dev
 fi
