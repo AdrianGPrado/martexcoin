@@ -17,19 +17,6 @@ matrix:
       env:
         - USE_UPNP: ''
         - PIE: 1
-        - DEPENDENCIES: "build-essential \
-                         libtool \
-                         automake \
-                         autotools-dev \
-                         autoconf \
-                         pkg-config \
-                         libssl-dev \
-                         libgmp3-dev \
-                         libevent-dev \
-                         bsdmainutils \
-                         libdb4.8-dev \
-                         libdb4.8++-dev \
-                         libminiupnpc-dev"
     # - os: linux
     #   sudo: required
     #   env:
@@ -60,11 +47,12 @@ before_install:
 install:
   - |-
     if [ $TRAVIS_OS_NAME == linux ]; then
-      sudo apt-get -y install $DEPENDENCIES;
+      ./.travis/deps-unix.sh;
     fi
-
 
 script:
   - |-
-    if [ $TRAVIS_OS_NAME == linux ]; then ./.travis/build-unix.sh; fi
+    if [ $TRAVIS_OS_NAME == linux ]; then
+      ./.travis/build-unix.sh;
+    fi
 
