@@ -54,7 +54,7 @@ script:
   - |-
     if [ $TRAVIS_OS_NAME == linux ]; then
       cd ./src && \
-      make -f makefile.unix USE_UPNP= && \
+      make -f makefile.unix -e PIE=1 USE_UPNP=$USE_UPNP && \
       strip MarteXd;
     fi
 
