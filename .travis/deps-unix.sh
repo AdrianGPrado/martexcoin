@@ -3,14 +3,14 @@
 
 # BerkeleyDB is required for the wallet. db4.8 packages are available
 # here: https://launchpad.net/~bitcoin/+archive/bitcoin
-sudo add-apt-repository ppa:bitcoin/bitcoin
+sudo add-apt-repository ppa:bitcoin/bitcoin -y
 
 # Update distribution
 sudo apt-get update
 
 # Install base packages
 echo 'Installing MarteXd dependencies'
-sudo apt-get install build-essential \
+sudo apt-get install -y build-essential \
                      libtool \
                      automake \
                      autotools-dev \
@@ -22,14 +22,14 @@ sudo apt-get install build-essential \
                      bsdmainutils
 
 # Install BerkleyDB4.8
-sudo apt-get install libdb4.8-dev \
+sudo apt-get install -y libdb4.8-dev \
                      libdb4.8++-dev
 
-sudo apt-get install libminiupnpc-dev
+sudo apt-get install -y libminiupnpc-dev
 
 if $MARTEX_QT ; then
 echo 'Installing MarteX-Qt dependencies'
-sudo apt-get install libqt5gui5 \
+sudo apt-get install -y libqt5gui5 \
                      libqt5core5a \
                      libqt5dbus5 \
                      qttools5-dev \
@@ -40,7 +40,7 @@ sudo apt-get install libqt5gui5 \
 # libqrencode (optional) can be installed with:
 if $MARTEX_QT_QR; then
 echo 'Installing optional dependenci QR-code'
-sudo apt-get install libqrencode-dev
+sudo apt-get install -y libqrencode-dev
 fi
 
 fi
