@@ -5,12 +5,12 @@ __dir__="$(cd "$(dirname "$0")" && pwd)"
 echo $__dir__
 
 if [ -n "${MARTEX_QT}" ]; then
-echo 'Compile MarteX-Qt.';
-echo $__dir__
+echo 'Compile MarteX-Qt.' &&
+echo $__dir__ ;
 else
 echo 'Compile MarteXd.';
-echo $__dir__
+echo $__dir__ &&
 cd $(__dir__)/src && \
 make -f makefile.unix USE_UPNP=- && \
-strip MarteXd
+strip MarteXd ;
 fi
