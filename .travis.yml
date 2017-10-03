@@ -53,8 +53,6 @@ install:
 script:
   - |-
     if [ $TRAVIS_OS_NAME == linux ]; then
-      cd ./src && \
-      make -f makefile.unix -e PIE=1 USE_UPNP=$USE_UPNP && \
-      strip MarteXd;
+      ./.travis/build-unix.sh;
     fi
 
