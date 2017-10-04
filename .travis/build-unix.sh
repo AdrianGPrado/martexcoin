@@ -10,7 +10,7 @@ echo $__dir__ ;
 else
 echo 'Compile MarteXd.';
 echo $__dir__ &&
-cd $__dir__/../src && \
+cd src && \
 make -f makefile.unix USE_UPNP=- && \
 strip MarteXd ;
 fi
