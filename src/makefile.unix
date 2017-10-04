@@ -84,6 +84,15 @@ LIBS+= \
         LDHARDENING+=-pie
     endif
 
+    # Travis-ci error:
+    # /usr/bin/ld: secp256k1/src/libsecp256k1_la-secp256k1.o:
+    #   relocation R_X86_64_32 against `.rodata.str1.8'
+    #   can not be used when making a shared object; recompile with -fPIC
+    ifdef PIC
+        HARDENING+=-fPIC
+        LDHARDENING+=-pic
+    endif
+
     # -D_FORTIFY_SOURCE=2 does some checking for potentially exploitable code patterns in
     # the source such overflowing a statically defined buffer.
     HARDENING+=-D_FORTIFY_SOURCE=2
