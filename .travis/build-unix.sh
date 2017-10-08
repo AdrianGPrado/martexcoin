@@ -11,6 +11,8 @@ else
 echo 'Compile MarteXd.';
 echo $__dir__ &&
 cd src && \
-make -f makefile.unix USE_UPNP=- && \
+make -f makefile.unix USE_UPNP=$USE_UPNP \
+                      PIE=$PIE && 
+                      PIC=$PIC \
 strip MarteXd ;
 fi

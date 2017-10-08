@@ -18,7 +18,7 @@ matrix:
       env:
         - USE_UPNP: ''
         - PIE: 1
-        # - PIC: 1
+        - PIC: 1
     # - os: linux
     #   sudo: required
     #   env:
