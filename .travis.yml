@@ -1,11 +1,9 @@
+language: c
 
 branches:
   except:
   - master
   - experimental
-
-language:
-  - cpp
 
 compiler:
   - gcc
