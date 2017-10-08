@@ -210,7 +210,7 @@ secp256k1/src/libsecp256k1_la-secp256k1.o:
     cd secp256k1; \
     chmod 755 *; \
     ./autogen.sh; \
-    ./configure --enable-module-recovery; \
+    ./configure --enable-module-recovery --with-pic; \
     make; \
     cd ..;
 MarteXd: secp256k1/src/libsecp256k1_la-secp256k1.o
