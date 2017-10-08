@@ -203,7 +203,6 @@ endif
 
 all: MarteXd
 
-echo "AAAAA build secp256k1"
 # build secp256k1
 DEFS += $(addprefix -I,$(CURDIR)/secp256k1/include)
 secp256k1/src/libsecp256k1_la-secp256k1.o:
